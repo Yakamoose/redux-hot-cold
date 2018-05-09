@@ -5,7 +5,7 @@ import {generateAuralUpdate, restartGame} from '../actions';
 
 import './top-nav.css';
 
-export function TopNav(props) {
+export default function TopNav(props) {
     return (
         <nav>
             <ul className="clearfix">
@@ -29,7 +29,7 @@ export function TopNav(props) {
                 <li>
                     <a
                         href="#get-status"
-                        /* the `visuallyhidden` class hides an element 
+                        /* the `visuallyhidden` class hides an element
             while leaving it available to screen reader users  */
                         className="visuallyhidden focusable status-link"
                         onClick={() => props.dispatch(generateAuralUpdate())}>
@@ -40,5 +40,3 @@ export function TopNav(props) {
         </nav>
     );
 }
-
-export default connect()(TopNav);
